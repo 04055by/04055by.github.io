@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>폼 양식 [ P122 ]</title>
+</head>
+<body>
+    <h1>회원가입</h1>
+    <!-- <form action = "전송위치-처리할위치" method = "전송방식(get/post)" name = "membership">  -->
+    <!-- method 방식 1.post; 파일로 넣어서 보내줌, 2.get; 링크에 공유되기 때문에 보안이 필요한 회원가입 같은 것은 post를 씀 -->
+    <form action = "" method = "post" name = "membership">
+        <!-- 힌트를 주고싶어; placeholder = "힌트내용 | 
+             읽기전용 ; readonly = "readonly" 또는 readonly 
+             필수입력 ; required 입력 안하면 안넘어감
+             자동완성여부 선택 : autocomplete = "on" 기본값 / "off"
+             이름 : name = "이름" 
+             input type = radio; 1선택쳌박 | checkbox; 중복선택쳌박 | select; 이메일 선택
+             for = "내용", id = "내용" for 와 id의 value가 같으면 글을 선택해도 박스로 커서가 감-->
+        <label for = "userId">아이디 : </label><input type = "text" name = "userId" id = "userId" placeholder = "문자로시작하세요" autocomplete = "on" required><br>
+        <label for = "pwd">비밀번호 : </label><input type = "password" name = "pwd" id = "pwd" placeholder = "숫자,특수문자포함 8글자 이상" required><br>
+        <label for = "pwdCheck">비밀번호 확인 : </label><input type = "password" name = "pwdCheck" id = "pwdCheck" required><br>
+        <label for = "userName">이름 : </label><input type = "text" name = "userName" required><br>
+        <!-- 배열로 가져감 name(자기가 알아보게); group과 같음 | value; 그룹 안에서의 구분 -->
+        성별 : <input type = "radio" name = "gender" value = "m" >남&nbsp;&nbsp;&nbsp;
+               <input type = "radio" name = "gender" value = "f" >여<br>
+
+        휴대전화 : 
+        <select name = "phone">
+            <option value = "010">010</option>
+            <option value = "02">02</option>
+            <option value = "031">031</option>
+
+        </select>-<input type = "text" name = "phone1">-<input type = "text" name = "phone2"><br>     
+
+        이메일 : <!-- @분류되어 있다면 type ; text | @뒤까지 통째라면 email -->
+        <input type = "text">@
+        <select name = "email">
+            <option value = "네이버">naver.com</option>
+            <option value = "다음">daum.net</option>
+            <option value = "구글">google.com</option>
+
+        </select><br>
+
+        취미 : <input type = "checkbox" name = "hobby" value = "음">음악감상&nbsp;&nbsp;&nbsp;
+              <input type = "checkbox" name = "hobby" value = "책">독서&nbsp;&nbsp;&nbsp;
+              <input type = "checkbox" name = "hobby" value = "산">등산<br>
+
+         
+        <!-- 열방향으로 몇글자 쓰게 할거야? textarea 사이에 값 넣으면 안됨! -->      
+        자기소개 : <textarea name = "introduce" cols = "50" rows = "10"></textarea><br>
+
+        첨부파일 : <input type = "file" value = "업로드"> <!-- <span>선택된 파일 없음</span> -->
+        <br>           
+    
+
+        <br><br>
+        <!-- <botton type = "submit">버튼으로 내용 전송</botton>    input type = "submit"과 같음. button은 이미지 전송이 가능함-->
+        <!-- 버튼 | 전송, 다시작성 -->
+        <input type = "submit" value = "전송">&nbsp;&nbsp;&nbsp;
+        <input type = "reset" value = "다시 작성">
+
+    </form>
+</body>
+</html>

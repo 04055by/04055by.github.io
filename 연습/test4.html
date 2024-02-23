@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>관람안내</title>
+    <!-- 외부 파일을 링크 | 자바; import | html; link 사용 -->
+    <!-- link는 style위에 씀. 링크닫기 </link> = /> -->
+    <link href="../css/basic.css" rel="stylesheet" type="text/css" />
+
+    <style>
+        /* 전체 상자 */
+        .container {
+            width: 100%;
+            height: 100vh;  /* view point; 보여지는 크기의 100% */
+            margin: 0px;
+            padding: 0px;
+        /*    background-color: tomato; /* 지울부분 확인용 */
+
+        }
+        .topNav {
+           
+            width: 100%;
+            height: 40px;  
+            line-height: 40px;
+            text-align: center; /* 글자 가운데정렬 */
+            margin-bottom: 10px; /* 아래쪽 여백 */
+            
+        /*    background-color: tomato; /* 지울부분 확인용 */
+
+        }
+
+        hr {
+            margin-top: 10px;
+            margin-bottom: 40px;
+            border-color: skyblue ;
+            width: 100%;
+
+        }
+
+        .info {
+            margin-bottom: 30px;
+            width: 100%;
+        }
+
+        .box {
+            width: 80%;
+            height: 100px;
+        /*    line-height: 10px; /* 줄과 줄 사이 간격 */
+            border: 1px solid coral;
+            background-color: rgb(214,252,157);
+            padding-left: 50px;
+            padding-top: 15px;
+            margin-left: 70px;
+        }
+        
+        .topNav li {  /* > 꺽새는 자식 (.topNav>ul>li) | 공백은 후손 (.topNav li) */
+            display: inline-block; 
+        }
+
+        .topNav li>a {  /* topNav 밑에 li 자식 a를 꾸며조 */
+            display: block; /* 너비, 높이를 가지고 줄바꿈도 해줌. 레벨변경 */
+            padding: 2px 8px;
+            font-weight: bold; /* 폰트굵기 */
+            font-size: 1.2rem; /* html 글자 크기의 1.2배 */
+        }
+                                /* hover; 글자에 커서 갖다댔을때 */
+        .topNav li>a:hover {    /* hover는 color, background-color만 바뀌어야함. 그외의것들은 바뀌면 안됨 */
+            color: white;
+            background-color: yellowgreen; /* 배경색 */
+            border-radius: 10px; /* 모서리부분 설정 */
+        }
+
+        /* 가장 위쪽 네비게이션 nav.topNav */
+        .topNav {
+            width: 100%;
+            height: 50px;
+            line-height: 50px; /* 수직 가운데(height 높이만큼), 줄간격 */
+            text-align: center; /* 가운데 정렬 */
+
+        }
+
+
+    </style>
+</head>
+<body>
+    <!-- <h1>test지울거임</h1>
+        <a href="test2.html">테스트 문서</a>
+        <ul>    
+            <li>메뉴1</li>
+            <li>메뉴2</li>
+        </ul> -->
+        
+        <!-- 1. 전체상자 .container -->
+        <div class="container">
+
+             <!-- 2. 본문 가장 위쪽 네비게이션 nav.topNav -->
+            <nav class = "topNav">
+                <ul>
+                    <li><a href="#">박물관 소개&nbsp;&nbsp;&nbsp;&nbsp;|</a></li>
+                    <li><a href="#">방문안내&nbsp;&nbsp;&nbsp;&nbsp;|</a></li>
+                    <li><a href="#">관람안내&nbsp;&nbsp;&nbsp;&nbsp;|</a></li>
+                    <li><a href="#">개인/단체 체험&nbsp;&nbsp;&nbsp;&nbsp;|</a></li>
+                    <li><a href="#">고객센터&nbsp;&nbsp;&nbsp;&nbsp;|</a></li>
+                    <li><a href="#">공지사항&nbsp;&nbsp;&nbsp;&nbsp;|</a></li>
+                </ul>
+
+            
+            </nav>
+
+             <!-- 3. 페이지 안내 section.contents -->
+            <div class="contents">   <!-- section 또는 div로 처리 -->
+                <h1>+ 방문안내</h1>
+                <hr> <!-- 수평선 -->
+            
+             <!-- 4. 관람 안내 article.info -->
+                <article class = "info">
+                    <h3>1. 관람안내</h3>
+                    <div class = "box">
+                        월.화.목.금 : 10:00 ~ 18:00<br>     <!-- 이렇게 덩그러니 주면 변경하기가 어려워짐 -->
+                        수.토 : 10:00 ~ 21:00<br>
+                        일 : 10:00 ~ 19:00<br>
+                    </div>
+                </article>
+
+             <!-- 4. 야간 개장 article.info -->
+                <article class = "info">
+                    <h3>2. 야간개장</h3>
+                    <div class = "box">
+                        매주 수.토 : 18:00 ~ 21:00<br>    
+                        수.토 : 10:00 ~ 21:00<br>
+                        일 : 10:00 ~ 19:00<br>
+                    </div>
+                </article>
+             <!-- 4. 관람료 안내 article.info -->
+                 <article class = "info">
+                    <h3>3. 관람료안내</h3>
+                    <div class = "box">
+                        ※ 무료 <br>    
+                        수.토 : 10:00 ~ 21:00<br>
+                        일. 공휴일 : 10:00 ~ 19:00<br>
+                    </div>
+                </article>
+
+             <!-- 5. 회사 정보 footer.footer-->
+
+        </div>
+        <!-- 전체상자 container 끝 -->
+        
+</body>
+</html>

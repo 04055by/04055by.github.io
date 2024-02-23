@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>테이블 [ P88 ]</title>
+    <!-- 테이블은 전부 행,row (tr) 단위로 처리 -->
+    <style>
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+
+        }
+        
+        /* th, th-child(2) width값 중복됨 -> 아래값을 적용함. 위에서 아래로 작업하니까! */
+        th {
+            background-color: tomato;
+            width: 120px;
+
+        }
+
+        th:nth-child(2) {   /* th의 2번째 자식 */
+            width: 1px;
+            color: aquamarine;
+        }
+
+        td:last-child {
+            text-align: center;
+            font-family: "바탕체";
+        }
+
+        td:nth-child(2n+1) {  /* (2n); child의 짝수 | (2n+1); 홀수 */
+            background-color: rgb(130, 238, 135);
+
+        }
+
+
+    </style>
+</head>
+<body>
+    
+
+    <table border = "1"> 
+    <caption>[ 캡션 ] 상품구성</caption>
+      
+        <tr>
+            <th>용도</th>
+            <th>중량</th>
+            <th>개수</th>
+            <th>가격</th>
+            
+        </tr>
+
+        <tr>
+            <td>선물용</td>
+            <td>3kg</td>
+            <td>11~16과</td>
+            <td>35,000원</td>
+        </tr>
+
+    </table>
+
+</body>
+</html>

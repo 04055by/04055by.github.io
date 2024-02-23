@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href = "../css/reset.css" rel = "stylesheet" />
+    <link href = "../css/basic.css" rel = "stylesheet" />
+
+    <!-- 반응형; (자식px/부모px)*100 = 가변크기 %의 값; 가변 크기로 만들 박스의 가로 너비 / 가변 크기로 만들 박스를 감싸고 있는 박스의 가로 너비) * 100 -->
+    <!-- padding, margin도 다 계산해서 %로 지정해야 함 -->
+    <!-- 글자 크기 단위: px, pt,, 크기 고정 | 고정놉!! -> em = 글자크기(px)/16px (1em=16px) -->
+    <!-- 글자크기단위; rem / em | rem(r-root); 처음부터 기본크기를 지정하기 때문에 중간에 기본 값이 바뀌지 않음 -->
+    <!--                          em()-->
+    <!-- 가변 글자크기 = (가변폰트를 적용할 글자 크기 / 적용할 요소를 감싸고 있는 요소의 글자크기) -->
+    <!-- 최신 브라우저는 픽셀 단위를 사용해도 축소/확대가 가능 -->
+<style>
+    div.wrap {
+        width: 100%;   
+        height: 100px;
+    }
+
+    header {
+        width: 100%;
+        height: 200px;
+        background-color: yellowgreen;
+    }
+    
+    div.container {
+        width: 100%;
+        height: 500px;
+        overflow: hidden;   /* 자식요소에 float 속성을 사용할 경우 overflow:hidden 필수 */
+    }
+
+    .left{
+        width: 200px;
+        height: 500px;
+        margin-right: 5px;
+        background-color: steelblue;
+        float: left;
+    }
+
+    .right {
+        float: left;    /* = right */
+        width: 755px;
+        height: 500px; 
+        background-color: tomato;
+    }
+
+    footer {
+        width: 100%;
+        height: 100px;
+        background-color: rgb(240, 240, 134);
+    }
+    
+    /*   https://getbootstrap.com/docs/4.6/components/badge/ 
+        <h1>Example heading <span class="badge badge-secondary">New</span></h1> */
+
+</style>
+</head>
+<body>
+    <div class="wrap">
+    <header class="header">
+        <div>머리말</div>
+
+
+    </header>
+    <div class="container">
+        <section class="left">
+            <h1>왼쪽</h1>
+
+        </section>
+        <section class="right">
+             <h1>오른쪽</h1>
+
+        </section>
+    </div>  <!-- 본문 끝 -->
+    <footer class="footer">
+            <h1>회사소개</h1>
+    </footer>
+    </div>
+
+</body>
+</html>
