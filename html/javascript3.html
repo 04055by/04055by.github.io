@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {     // function(){처리할내용} ; 콜백함수, 이벤트리스너. 함수안에 함수를 호출 
+            // doc에 addEvent 함수를 호출 | DOMContentLoaded; 함수 안에 function 함수 안에 중괄호 내용을 처리해줘
+            let num = Number(prompt("숫자 입력"));
+
+            let sum = 0;
+            for (let i = 1; i <= num; i++) {
+                sum += i;
+            }
+            // document.write(sum);
+
+            let div1 = document.querySelector('.innerResult');   // querySelector; id, tag, class 등 전부 받을 수 있음
+            div1.innerHTML = '<h1>' + sum + '</h1>';
+
+        });      
+
+        
+    </script>
+
+</head>
+
+<body>
+    <div class="innerResult"></div>
+    <hr>
+    <div class="testResult"></div>
+
+</body>
+
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+// 한 줄 주석 
+/* 여러 줄 주석 */
+/*  ECMA ( 유럽컴퓨터제조협회 ) 에서 자바스크립트를 ECMAScript라는 이름으로 표준화
+    ECMAScript ( 자바스크립트 ) : 브라우저 안에서 실행되는 객체지향 프로그래밍 언어
+    ECMAScript6
+
+    간단하게 메시지 출력
+    1) alert(실행할 문장); // 실행문장의 끝인 ;은 생략가능
+    2) console.log(실행 문장); // 콘솔에서 확인
+    3) document.write(실행 문장); // 브라우저 본문에 표시
+
+
+*/
+        // 자바스크립트 메소드 
+        alert("즐 거 운 시 간 !!!!!!!!!!!!!");  // "" 또는 '' - 둘 다 문자열로 인식
+        console.log("즐 거 워");       // console.log - 출력화면 개발자도구(F12) - console에서 확인
+    //  alert("test");
+        document.write('<h1>javascript is fun</h1>'); // 'body 문서에 써줘' 메소드
+
+        // 자바스크립트 타입 ;      1. 숫자 number | 2. 문자열 String       | 3. boolean (true1 또는 0 이외의 값 / false 0)
+        // 비교연산자 ; >, >=, <, <=, ==, !=, ===   | ==; 값이 같은지만 비교 | ===; 값, 자료형을 비교 | !=; 값만 비교 | !==; 값과 타입이 같지 않다.
+        // 논리연산자 ; &&, ||, !
+        /* 변수와 상수 ; 변수선언 [ var let const ]
+        1_var; 변수를 중복해서 선언 가능. 변수가 속하는 범위가 애매함
+        var result = 3;
+        var result = 7;     -> 가능. result에는 마지막 선언 7이 담김
+
+        2_let; 변수 중복 선언 불가. 변수 범위가 명확 ({블록}) (Java의 지역변수처럼 선언된 곳에서만 쓸 수 있음)
+        let test = 3;
+        let test = 7;       -> 불가능. 중복 선언 안됨.
+
+        3_const; 값이 한번 정해지면 절대 변하지 않음. 상수 (Java의 final처럼)
+        const 상수이름 = 값
+        const PI = 3.141592
+        */
+
+        /* prompt(메세지..); 키보드로 입력 받기. 문자열로 입력받음 (Java의 Scanner처럼)
+        Q. 숫자를 입력받아서 홀/짝 구하기 
+
+        let inputNum = prompt("정수를 입력하세요"); -> 입력받은 숫자 (문자열타입) 을 숫자로 형변환 필요
+        let inputNum = Number(prompt("정수를 입력하세요.")) (자바; int inputNum = Integer.ParseInt(scan.nextLine());) */
+
+
+        
+        let inputNum = Number(prompt('정수를 입력하세요.'));
+        let result;
+        if (inputNum % 2 == 0 ) {
+            result = '짝수';
+        } else {
+            result = '홀수';
+        }
+        
+        // 출력방법
+        alert(result);
+        console.log(result);
+        document.write(result);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
