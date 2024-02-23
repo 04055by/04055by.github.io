@@ -1,0 +1,282 @@
+/* 전체를 감싸는 부분 */
+.wrap {
+    width: 100%;
+}
+
+/* header 윗쪽 부분 */
+.topContainer {
+    width: 100%;
+    height: 120px;
+    position: relative;
+    margin-bottom: 30px;
+    /*    background-color: violet;   /* 지울 부분, 확인용 */
+}
+
+/* 1. 로고 부분 */
+.topLogo {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    /* display: flex; 자유롭게(반응형) | 로고 배치를 고정시킬거야; position; absolute */
+    flex-direction: row;
+    /* 옆으로 넘어갈거야 줄로 배치하겠어 */
+    flex-wrap: nowrap;
+    /* wrap; 크기 축소시 밑으로 내려가게 할게(반응형) <-> nowrap */
+}
+
+/* 책마을책세상의 왼쪽 상단 로고 */
+.logo {
+    width: 600px;
+    overflow: hidden;
+    /* 자식에서 float을 쓰기 위해 설정 */
+    margin-top: 10px;
+    margin-left: 5px;
+    /*  background-color: steelblue;  */
+}
+
+.logo>img {
+    width: 80px;
+    height: 60px;
+    float: left;
+    margin-right: 10px;
+}
+
+.logo>h1 {
+    height: 80px;
+    line-height: 60px;
+    float: left;
+    /* 앞 이미지에 붙도록 */
+    font-size: 2rem;
+    color: gray;
+}
+
+/* 2. 네비게이션 부분; 로그인, 회원가입 */
+.topNav {
+    width: 350px;
+    text-align: right;
+}
+
+.topNav li {
+    display: inline-block;
+}
+
+.topNav li>a {
+    display: inline-block;
+    padding: 10px 7px;
+    /* 위아래 / 왼오 */
+}
+
+.topNav li>a:hover {
+    color: white;
+    background-color: black;
+    border-radius: 5px;
+}
+
+.mainNav {
+    position: absolute;
+    bottom: 0px;
+    left: 150px;
+}
+
+.mainNav>ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.mainNav li>a {
+    display: inline-block;
+    padding: 5px 12px;
+    font-size: 1.1rem;
+}
+
+.mainNav li>a:hover {
+    color: tomato;
+}
+
+/* 경계선 */
+hr {
+    border: 2px double gray;
+    margin-bottom: 10px;
+}
+
+/* 검색 부분 */
+.search {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    /* 수직정렬 */
+    padding: 3px 0px;
+    /* 위아래 왼오 */
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    border-top: 1px solid gainsboro;
+    border-bottom: 1px solid gainsboro;
+
+    margin-bottom: 10px;
+}
+
+/* 자료검색, 강좌검색 */
+.search>form {
+    overflow: hidden;
+}
+
+.search>form>div {
+    float: left;
+    width: 200px;
+    background-color: chartreuse;   /* 지울 부분, 확인용 */
+}
+
+.search>form>div span {
+    display: inline-block;
+    margin-left: 5px;
+    margin-right: 12px; /* 자료검색, 강좌검색 사이를 띄우기 위함 */ 
+}
+
+/* .search>form>input   -> 타입이나 네임 이름으로 정해주기
+.search>form>input[type="text"] */
+.search>form>input[name="textSearch"] {
+    width: 320px;
+    height: 35px;
+    text-align: left;
+    padding-left: 10px;
+}
+
+/* 배너 부분 */
+.banner {
+    width: 100%;
+    margin-bottom: 20px; 
+}
+
+.banner>img {
+    width: 100%;
+}
+
+/* 코스 설명 부분, 글쓰기 교실,, */
+.courseInfo {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;    /* 공간 부족하면 요소 아래로 */
+    margin-bottom: 20px;
+}   
+    
+/* .courseInfo>a {   
+   display: inline-block;    display 넣기 위해서는 pdn, mgn 도 넣어야 함
+    padding: 2px 3px;
+    margin: 3px 2px; 
+} */
+
+.courseInfo img {
+    box-sizing: border-box;
+    width: 240px;
+}
+
+/* 탭이 있는 부분, 공지사항,, */
+.mainInfo {
+    box-sizing: border-box;
+    width: 100%;
+    height: 420px;
+
+    display: flex; /* 탭 여러개 들어가니까 flex */
+    flex-direction: row;    /* 플렉스아이템(자식) 배치 방향 */
+    flex-wrap: wrap;
+    justify-content: space-between; /* width 양 끝에 맞춰서 배치 */
+    margin-bottom: 20px;
+}
+
+/* 탭 부분 */
+.tabMenu {
+    width: 600px;
+    height: 420px;
+    margin-right: 20px;
+}
+
+/* 탭 제목 부분 */
+.tabTitle {
+    height: 49px;
+    overflow: hidden;   /* 밑에 float 쓸거라서 부모에 overflow 줌 */
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+
+/* 탭 제목의 버튼 부분 <- float 사용될 부분 */
+.tabTitle button {
+    width: 150px;
+    background-color: inherit; /* inherit; 부모값을 상속받는다 */
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;    /* 마우스커서 */
+    padding: 14px 16px;
+    transition: 0.5s;   /* 하나의 스타일이 완전히 다른 스타일로 바뀌는 시간 ( P367 ) */
+    font-size: 17px;
+   /* background-color: tomato; */
+} 
+
+/* 탭 제목의 버튼 부분에 마우스커서 올릴 때 */
+.tabTitle button:hover {    
+    background-color: #ddd;
+}
+
+/* 탭 제목의 버튼 부분이 활성화 되었을 때 */
+.tabTitle button.active {
+    background-color: #ccc;
+}
+
+.tabPage {
+    box-sizing: border-box;
+    height: 369px;
+    display: none;  /* display none은 숨김, 자리까지 없어짐 */
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;   /* 윗쪽 테두리 없앰 */
+}
+
+.tablinkInit {
+    display: block;
+}
+
+/* 책 이미지, 책 소개 부분 */
+.bookInfo>img {
+    box-sizing: border-box;
+    width: 340px;
+    height: 369px;
+    /* vertical-align: baseline; */
+    margin-top: 50px;
+}
+
+/* footer 부분 */
+.footer{
+    width: 100%;
+    height: 200px;
+}
+.companyInfo{
+    box-sizing: border-box;
+    width: 100%;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+    margin-bottom: 10px;
+}
+.companyInfo>ul{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    flex-direction: row;
+    height: 40px;
+    line-height: 40px;
+    padding: 0px 20px;
+}
+.companyInfo li>a:hover{
+    color: red;
+}
+.symbols{
+    margin-left: 18px;
+}
+.companyAddress>span{
+   line-height: 28px;
+   letter-spacing: 1px;
+   margin-left: 20px;
+}
