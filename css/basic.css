@@ -1,0 +1,35 @@
+/* 특정 페이지마다 쓰이는것은 메소드로 빼듯이 css로 생성해서 씀 */
+
+html, body, head, div span, p, header, nav, section, article, aside, footer,        /* * 전체선택자; 페이지 전체에 대해 스타일 적용 */
+h1, h2, h3, h4, h5, h6, hr, ol, ul, li, a, img, iframe,                              /* hr 수평선 */
+table, thead, tbody, tfoot, tr, th, td, form, input, label, button, select, textarea, br
+
+{   margin: 0px;
+    padding: 0px;
+/*    font-size: 100%;    */
+}
+
+body {
+    width: 960px;       /* 12로 나누어 떨어지는 값 */
+    margin: 0px auto;   /* 위/아래: 0, 왼/오른쪽 여백을 같게하고 가운데정렬 */
+}
+
+ol, ul, li {
+    list-style: none;  /* 목록 앞의 기호 */
+}
+
+a, a:visited {             /* a; 하이퍼링크 부분 */
+    text-decoration: none; /* 밑줄 */
+    color: black;
+}
+
+img {
+    border: none;
+}
+
+/* <!-- collapse; 서로 이웃하는 테이블이나 셀의 테두리선을 겹쳐서 표현 | separate; 서로 이웃하는 테이블이나 셀의 테두리선을 합쳐서 표현 */
+/* table spacing -> style에서 수정 */
+table {
+    border-collapse: collapse; 
+    border-spacing: 0;         
+}
